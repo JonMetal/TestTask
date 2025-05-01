@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\CollectionExtension.cs" />
     <Compile Include="Letter\LetterType.cs" />
     <Compile Include="Letter\IdentifierLetter.cs" />
     <Compile Include="ReadOnlyStream\IReadOnlyStream.cs" />

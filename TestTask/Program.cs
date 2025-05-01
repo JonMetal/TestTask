@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using TestTask.Extensions;
 using TestTask.Letter;
 
 namespace TestTask
@@ -52,15 +53,6 @@ namespace TestTask
             else
             {
                 letterStats.IncStatictic();
-            }
-        }
-
-        private static void CopyList(ICollection<LetterStats> toList, ICollection<LetterStats> fromList)
-        {
-            toList.Clear();
-            foreach (var item in fromList)
-            {
-                toList.Add(item);
             }
         }
 
@@ -137,10 +129,10 @@ namespace TestTask
             switch (letterType)
             {
                 case LetterType.Consonants:
-                    CopyList(letters, letters.Where(l => l.LetterType == LetterType.Vowel).ToList());
+                    letters.CopyFrom(letters.Where(l => l.LetterType == LetterType.Vowel).ToList());
                     break;
                 case LetterType.Vowel:
-                    CopyList(letters, letters.Where(l => l.LetterType == LetterType.Consonants).ToList());
+                    letters.CopyFrom(letters.Where(l => l.LetterType == LetterType.Consonants).ToList());
                     break;
             }
             
