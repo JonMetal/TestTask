@@ -42,12 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharType.cs" />
-    <Compile Include="IReadOnlyStream.cs" />
-    <Compile Include="LetterStats.cs" />
+    <Compile Include="Letter\LetterType.cs" />
+    <Compile Include="Letter\IdentifierLetter.cs" />
+    <Compile Include="ReadOnlyStream\IReadOnlyStream.cs" />
+    <Compile Include="Letter\LetterStats.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadOnlyStream.cs" />
+    <Compile Include="ReadOnlyStream\ReadOnlyStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestFile1.txt" />
+    <Content Include="TestFile2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
