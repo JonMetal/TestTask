@@ -11,11 +11,11 @@ namespace TestTask
 
         public int Count { get; private set; } = 1;
 
-        public LetterType? LetterType { get; private set; }
+        public LetterType LetterType { get; private set; }
 
         public void IncStatictic() { Count++; }
 
-        public LetterStats(char letter, LetterType? type)
+        public LetterStats(char letter, LetterType type)
         {
             Letter = letter;
             LetterType = type;

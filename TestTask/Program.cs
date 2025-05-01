@@ -43,7 +43,7 @@ namespace TestTask
             return new ReadOnlyStream(fileFullPath);
         }
 
-        private static void AddOrIncStatistic(ICollection<LetterStats> listLetterStats, char c, LetterType? letterType)
+        private static void AddOrIncStatistic(ICollection<LetterStats> listLetterStats, char c, LetterType letterType)
         {
             LetterStats letterStats = listLetterStats.FirstOrDefault(ls => ls.Letter == c);
             if (letterStats == null)
@@ -78,7 +78,7 @@ namespace TestTask
                     }
                     else
                     {
-                        AddOrIncStatistic(result, c, letterType);
+                        AddOrIncStatistic(result, c, letterType.Value);
                     }                               
                 }
             }
@@ -107,7 +107,7 @@ namespace TestTask
                     {
                         if(c == lastChar)
                         {
-                            AddOrIncStatistic(result, c, letterType);
+                            AddOrIncStatistic(result, c, letterType.Value);
                         }
                     }
                     lastChar = c;
